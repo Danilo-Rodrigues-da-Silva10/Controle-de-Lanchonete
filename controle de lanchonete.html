@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de lachonete</title>
+</head>
+<body>
+<!-- Meu código da Lanchonete! :) -->
+<script>
+    var menu, lanches, bebidas,
+    contXTUDO=0, XTUDO=0, contXEGG=0, XEGG=0, contXSALADA=0, XSALADA=0, contBAURU=0, BAURU=0,
+    bebidas, contCOCACOLA=0, COCACOLA=0, contGUARANA=0, GUARANA=0, contFANTA=0, FANTA=0, contTUBAINA=0, TUBAINA=0, total;
+    do
+    {
+        menu = parseFloat(prompt("Menu Principal \n 1-lanches \n 2-bebidas \n 3-conta \n 0-sair"))
+        switch (menu)
+        {
+        case 1:
+        do
+        {
+            lanches = parseFloat(prompt("Menu de lanches \n 1- x-tudo (R$10,00) \n 2- x-egg (R$9,00) \n 3- x-salada (R$8,00) \n 4- bauru (R$5,00) \n 0- sair"))
+            switch (lanches)
+            {case 1:
+            contXTUDO++
+            XTUDO=XTUDO+10
+            break;
+            case 2:
+            contXEGG++
+            XEGG=XEGG+9
+            break;
+            case 3:
+            contXSALADA++
+            XSALADA=XSALADA+8
+            break;
+            case 4:
+            contBAURU++
+            BAURU=BAURU+5
+            break;
+            case 0:
+            break 
+    }      
+        } 
+        while (lanches!=0)
+        break;
+
+        case 2:
+        do
+        {
+        bebidas = parseFloat(prompt("Menu de bebidas \n 1-coca-cola (R$5,00) \n 2-guaraná (R$4,00) \n 3-fanta (R$4,00) \n 4-tubaína (R$3,00) \n 0-sair"))
+
+        switch (bebidas)
+    { 
+        case 1:
+        contCOCACOLA++
+        COCACOLA=COCACOLA+5
+        break;
+        case 2:
+        contGUARANA++
+        GUARANA=GUARANA+4
+        break;
+        case 3:
+        contFANTA++
+        FANTA=FANTA+4
+        break;
+        case 4:
+        contTUBAINA++
+        TUBAINA=TUBAINA+3 
+        case 0:
+        break;
+    }
+        }
+    while (bebidas!=0)
+    break;
+    case 3:
+    total=XTUDO+XEGG+XSALADA+BAURU+COCACOLA+GUARANA+FANTA+TUBAINA
+    alert("CONTA\n\nX-tudo "+contXTUDO+" R$"+XTUDO+",00\nX-egg "+contXEGG+" R$"+XEGG+",00\nX-salada "+contXSALADA+" R$"+XSALADA+",00\nBauru "+contBAURU+" R$"+BAURU+",00\n\nCoca-Cola "+contCOCACOLA+" R$"+COCACOLA+",00\nGuaraná "+contGUARANA+" R$"+GUARANA+",00\nFanta "+contFANTA+" R$"+FANTA+",00\nTubaína "+contTUBAINA+" R$"+TUBAINA+",00\n\nTOTAL: "+total+",00")
+
+    break;
+    case 0:
+    break;
+    }
+    }while (menu!=0) 
+</script>
+
+</body>
+</html> 
